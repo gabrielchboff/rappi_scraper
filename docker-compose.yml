@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  scrapper:
+    container_name: rappi_scraper
+    restart: always
+    build:
+      context: .
+      dockerfile: Dockerfile
+    expose:
+      - "7777"
+    ports:
+      - "7777:7777"
+    environment:
+      - ENVIRONMENT=main
